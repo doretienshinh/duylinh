@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    </head>
+    <body>
+        <label for="money">So luong token:</label>
+        <input type="text" id="money"></br>
+        <label for="addressTo">Dia chi gui den:</label>
+        <input type="text" id="addressTo"></br>
+        <button onclick="triggerSmartContract()">Send</button>
+
+    </br></br>
+        <label for="amountStake">So luong stake:</label>
+        <input type="text" id="amountStake"></br>
+        <button onclick="triggerSmartContract1()">Stake</button>
+    <script> 
+        async function triggerSmartContract() {
+            const trc20ContractAddress = "TURsRPiB3d34bg1pZETYztUcRAtrVRLusc";//contract address
+            var address = "TETbMazf6BuvNhaF4CvZGVVNpZfTcqKk6p";
+            var addressTo = document.getElementById('addressTo').value;
+            var money = parseInt(document.getElementById('money').value);
+            try {
+                let contract = await tronWeb.contract().at(trc20ContractAddress);
+                //Use send to execute a non-pure or modify smart contract method on a given smart contract that modify or change values on the blockchain.
+                // These methods consume resources(bandwidth and energy) to perform as the changes need to be broadcasted out to the network.
+                await contract.transfer(
+                    addressTo, //address _to
+                    money   //amount
+                ).send({
+                    feeLimit: 1000000
+                }).then(output => {console.log('- Output:', output, '\n');});
+            } catch(error) {
+                console.error("trigger smart contract error",error)
+            }
+        }
+        async function triggerSmartContract1() {
+            const trc20ContractAddress = "TURsRPiB3d34bg1pZETYztUcRAtrVRLusc";//contract address
+            var address = "TETbMazf6BuvNhaF4CvZGVVNpZfTcqKk6p";
+            var amountStake = document.getElementById('amountStake').value;
+            try {
+                let contract = await tronWeb.contract().at(trc20ContractAddress);
+                //Use call to execute a pure or view smart contract method.
+                // These methods do not modify the blockchain, do not cost anything to execute and are also not broadcasted to the network.
+                let result = await contract.stake(
+                    amountStake
+                ).send({
+                    feeLimit: 100000
+                }).then(output => {console.log('- Output:', output, '\n');});
+            } catch(error) {
+                console.error("trigger smart contract error",error)
+            }
+        }
+    </script>
+    </body>
+</html>
