@@ -153,6 +153,7 @@ contract BankToken is ERC20Interface, Owned, SafeMath {
         UserMap[msg.sender][coinAddress].push(stk);
         return true;
     }
+    
     //trả về tổng lượng token đã gửi, coinAddress là đỉa chỉ contract của token đã gửi
     function balanceOfStake(address coinAddress) public view returns (uint) {
         return _stake[msg.sender][coinAddress];
