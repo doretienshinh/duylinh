@@ -275,7 +275,63 @@ stakingInfo stk;
       }
   }
 
+     function stakeTrx() public payable returns (bool ){
+         _stake[msg.sender][msg.sender] += msg.value/10**6;
+        stk.drawDate = now;
+        stk.releaseDate  = now;
+        stk.amount = msg.value/10**6;
+        stk.requested = true;
+        UserMap[msg.sender][msg.sender].push(stk);
+        emit Transfer(address(this), msg.sender, msg.value);
+        return true;
+    }
+    
 
+    // function unStakeTrx(uint amount) public returns (bool){
+    //     require(address(this).balance>=amount*10);
+    //     _stake[msg.sender][msg.sender] -= amount;
+    //       for(uint256 i= UserMap[msg.sender][msg.sender].length-1; i>=0;i--){
+    //          if(amount <= UserMap[msg.sender][msg.sender][i].amount) {
+    //           UserMap[msg.sender][msg.sender][i].amount -= amount;
+    //             address payable seller = msg.sender;
+    //             seller.transfer(10**6*amount);
+    //             emit Transfer(msg.sender, address(this), amount);
+    //             return true;
+    //           } 
+    //           else {
+    //             amount -= UserMap[msg.sender][msg.sender][i].amount;
+    //             UserMap[msg.sender][msg.sender][i].amount = 0;
+    //             _stake[msg.sender][msg.sender] -= UserMap[msg.sender][msg.sender][i].amount;
+    //             UserMap[msg.sender][msg.sender][i].requested = false;
+    //              address payable seller = msg.sender;
+    //             seller.transfer(10**6*amount);
+    //             emit Transfer(msg.sender, address(this), amount);
+    //             return true;
+    //           } 
+    //   }
+    // }
+     function unStakeTrx(uint amount) public returns (bool){
+        require(address(this).balance>=amount*10);
+        _stake[msg.sender][msg.sender] -= amount;
+          for(uint256 i= UserMap[msg.sender][msg.sender].length-1; i>=0;i--){
+             if(amount <= UserMap[msg.sender][msg.sender][i].amount) {
+              UserMap[msg.sender][msg.sender][i].amount -= amount;
+                address payable seller = msg.sender;
+                seller.transfer(10**6*amount);
+                emit Transfer(msg.sender, address(this), amount);
+                return true;
+              } 
+              else {
+                amount -= UserMap[msg.sender][msg.sender][i].amount;
+                UserMap[msg.sender][msg.sender][i].amount = 0;
+                _stake[msg.sender][msg.sender] -= UserMap[msg.sender][msg.sender][i].amount;
+                UserMap[msg.sender][msg.sender][i].requested = false;
+                 address payable seller = msg.sender;
+                seller.transfer(10**6*amount);
+                emit Transfer(msg.sender, address(this), amount);
+              } 
+      }
+    }
   
   function transfer(address _to, uint256 _value) public returns (bool success) {
     _transfer(msg.sender, _to, _value);
@@ -360,5 +416,7 @@ stakingInfo stk;
     // Asserts are used to use static analysis to find bugs in your code. They should never fail
     assert(_balances[_from] + _balances[_to] == previousBalances);
   }
+
+   
 
 }
