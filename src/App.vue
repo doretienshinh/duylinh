@@ -74,44 +74,7 @@
                             <div class="sun__item-header">
                                 <div class="sun__item-header-img">
                                     <img src="../src/assets/sunlogo.png" class="logo1">
-                                </div>
-                                <div class="sun__item-header-conten">
-                                    <p>SUN/TRX LP Pool</p>
-                                    <span class="sun__item-header-conten-phu">Stake SUN/TRX LP Earn <span class="sun__item-header-conten-phu-phu">9</span><span class="sun__item-header-conten-phu-phu">x</span> SUN</span>
-                                </div>
-                            </div>
-                            <div class="sun__item-body">
-                                <div class="sun__item-body1">
-                                    <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
-                                </div>
-                                <div class="sun__item-body2">
-                                    <p class="sun__item-tokuchou">Total Staked</p>
-                                    <div class="sun__item-body2-item">
-                                        <span>1,757,981</span>
-                                        <span>SUN</span>
-                                    </div>
-                                    <div class="sun__item-body2-item">
-                                        <span>555,126,738</span>
-                                        <span>TRX</span>
-                                    </div>
-                                    <p class="sun__item-tokuchou">Pool Supply</p>
-                                    <div class="sun__item-body2-item">
-                                        <span>22,814</span>
-                                        <span>SUN</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sun__item-footer">
-                                <a href="#"><p class="sun__item-footer1">Get LP Token</p></a>
-                                <p class="sun__item-footer2" @click="sunTron =true,getBalanceOfStake(),getBalanceOfToken(), thaydoibody(),magiaodich='https://shasta.tronscan.org/#/transaction/'">select</p>
-                            </div>
-                        </div>
-                        <div class="sun__item">
-                            <div class="sun__item-header">
-                                <div class="sun__item-header-img">
                                     <img src="../src/assets/ulogo.png" class="logo1">
-                                    <img src="../src/assets/tronlogo.png" class="logo2">
                                 </div>
                                 <div class="sun__item-header-conten">
                                     <p>SUN/TRX LP Pool</p>
@@ -142,14 +105,14 @@
                             </div>
                             <div class="sun__item-footer">
                                 <a href="#"><p class="sun__item-footer1">Get LP Token</p></a>
-                                <p class="sun__item-footer2" @click="uTron= true">select</p>
+                                <p class="sun__item-footer2" @click="sunTron =1,tokenAddress=sunAddress,getBalanceOfStake(),getBalanceOfToken(), thaydoibody(),magiaodich='https://shasta.tronscan.org/#/transaction/'">select</p>
                             </div>
                         </div>
                         <div class="sun__item">
                             <div class="sun__item-header">
                                 <div class="sun__item-header-img">
-                                    <img src="../src/assets/tlogo.png" class="logo1">
                                     <img src="../src/assets/tronlogo.png" class="logo2">
+                                    <img src="../src/assets/ulogo.png" class="logo1">
                                 </div>
                                 <div class="sun__item-header-conten">
                                     <p>SUN/TRX LP Pool</p>
@@ -180,7 +143,45 @@
                             </div>
                             <div class="sun__item-footer">
                                 <a href="#"><p class="sun__item-footer1">Get LP Token</p></a>
-                                <p class="sun__item-footer2" @click="tTron= true">select</p>
+                                <p class="sun__item-footer2" @click="sunTron =2,getBalanceOfStakeTrx(),getBalanceOfTrx(), thaydoibody(),magiaodich='https://shasta.tronscan.org/#/transaction/'">select</p>
+                            </div>
+                        </div>
+                        <div class="sun__item">
+                            <div class="sun__item-header">
+                                <div class="sun__item-header-img">
+                                  <img src="../src/assets/ulogo.png" class="logo1">
+                                  <img src="../src/assets/ulogo.png" class="logo1">
+                                </div>
+                                <div class="sun__item-header-conten">
+                                    <p>SUN/TRX LP Pool</p>
+                                    <span class="sun__item-header-conten-phu">Stake SUN/TRX LP Earn <span class="sun__item-header-conten-phu-phu">9</span><span class="sun__item-header-conten-phu-phu">x</span> SUN</span>
+                                </div>
+                            </div>
+                            <div class="sun__item-body">
+                                <div class="sun__item-body1">
+                                    <span>Total:54,388,917,234</span>
+                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                </div>
+                                <div class="sun__item-body2">
+                                    <p class="sun__item-tokuchou">Total Staked</p>
+                                    <div class="sun__item-body2-item">
+                                        <span>1,757,981</span>
+                                        <span>SUN</span>
+                                    </div>
+                                    <div class="sun__item-body2-item">
+                                        <span>555,126,738</span>
+                                        <span>TRX</span>
+                                    </div>
+                                    <p class="sun__item-tokuchou">Pool Supply</p>
+                                    <div class="sun__item-body2-item">
+                                        <span>22,814</span>
+                                        <span>SUN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sun__item-footer">
+                                <a href="#"><p class="sun__item-footer1">Get LP Token</p></a>
+                                <p class="sun__item-footer2" @click="sunTron= 3,tokenAddress=trc20ContractAddress ,getBalanceOfStake(),getBalanceOfToken(), thaydoibody(),magiaodich='https://shasta.tronscan.org/#/transaction/'">select</p>
                             </div>
                         </div>
                     </div>
@@ -547,10 +548,10 @@
                 </div>
             </div>
         </div>
-        <div class="stake-sunTron" v-if="sunTron== true">
+        <div class="stake-sunTron" v-if="sunTron== 1">
         <div class="stake-body">
            <div class="stake-sunTron-content">
-               <div class="stake-sunTron-exit" @click="sunTron= false,thaydoibody()">+</div>
+               <div class="stake-sunTron-exit" @click="sunTron= 0,thaydoibody()">+</div>
            <div>
                 <div class="stake-sunTron-header"><span class="stake-sunTron-header-stake" @click="sunTronStake=true" :class="{stakesunTronheaderhover : sunTronStake}">Stake</span><span class="stake-sunTron-header-claim"  @click="sunTronStake=false" :class="{stakesunTronheaderhover: !sunTronStake}">Claim</span></div><br/>
             <div v-if="sunTronStake==true" class="stake-sunTron-body">
@@ -570,14 +571,100 @@
             <div v-else class="stake-sunTron-body">
                 <div class="stake-sunTron-body1">
                     <p>Pending Claim<span @click="claimWithDraw()">Claim</span></p>
-                    <p class="stake-sunTron-input1"></p>
+                    <p class="stake-sunTron-input1">{{balanceOfDraw}}</p>
                 </div>
                 <div class="stake-sunTron-body2">
                     <p>Staked<span @click="sotienUnstake = balanceStake">MAX</span></p>
                     <input class="stake-sunTron-input2" v-model="sotienUnstake" placeholder="0">
                     <p class="stake-sunTron-body2-footer">Maximum Amount: {{balanceStake}} SUN</p>
                 </div>
-                <div class="stake-sunTron-footer" @click="unstakeToken()">
+                <div class="stake-sunTron-footer" @click="unstakeTokenAndDraw()">
+                    Claim & Unstake
+                </div>
+            </div>
+           </div>
+           </div>
+           <div v-if="magiaodich!='https://shasta.tronscan.org/#/transaction/'" class="stake-sunTron-notification">
+               <div class="stake-notification-exit" @click="magiaodich='https://shasta.tronscan.org/#/transaction/',getBalanceOfStake(),getBalanceOfToken()">+</div>
+               <div>Bạn đã hoàn cmn tất giao dịch</div>
+               <a v-bind:href="linkGiaoDich" target="_blank">fake fake fake</a>
+           </div>
+        </div>
+        </div>
+        <div class="stake-sunTron" v-if="sunTron== 2">
+        <div class="stake-body">
+           <div class="stake-sunTron-content">
+               <div class="stake-sunTron-exit" @click="sunTron= 0,thaydoibody()">+</div>
+           <div>
+                <div class="stake-sunTron-header"><span class="stake-sunTron-header-stake" @click="sunTronStake=true" :class="{stakesunTronheaderhover : sunTronStake}">Stake</span><span class="stake-sunTron-header-claim"  @click="sunTronStake=false" :class="{stakesunTronheaderhover: !sunTronStake}">Claim</span></div><br/>
+            <div v-if="sunTronStake==true" class="stake-sunTron-body">
+                <div class="stake-sunTron-body1">
+                    <p>My Stake</p>
+                    <div class="stake-sunTron-input1"><div class="stake-sunTron-input1-1">{{balanceStake}}</div></div>
+                </div>
+                <div class="stake-sunTron-body2">
+                    <p>Stake SUN<span @click="getMaxTrx()">MAX</span></p>
+                    <input class="stake-sunTron-input2" v-model="sotienstake" placeholder="0">
+                    <p class="stake-sunTron-body2-footer">Maximum Stake:{{balanceOfTrx}} TRX</p>
+                </div>
+                <div class="stake-sunTron-footer" @click="stakeTrx()">
+                    Stake
+                </div>
+            </div>
+            <div v-else class="stake-sunTron-body">
+                <div class="stake-sunTron-body1">
+                    <p>Pending Claim<span @click="claimWithDrawTrx()">Claim</span></p>
+                    <p class="stake-sunTron-input1">{{balanceOfDraw}}</p>
+                </div>
+                <div class="stake-sunTron-body2">
+                    <p>Staked<span @click="sotienUnstake = balanceStake">MAX</span></p>
+                    <input class="stake-sunTron-input2" v-model="sotienUnstake" placeholder="0">
+                    <p class="stake-sunTron-body2-footer">Maximum Amount: {{balanceStake}} TRX</p>
+                </div>
+                <div class="stake-sunTron-footer" @click="unStakingTrx()">
+                    Claim & Unstake
+                </div>
+            </div>
+           </div>
+           </div>
+           <div v-if="magiaodich!='https://shasta.tronscan.org/#/transaction/'" class="stake-sunTron-notification">
+               <div class="stake-notification-exit" @click="magiaodich='https://shasta.tronscan.org/#/transaction/',getBalanceOfTrx(),getBalanceOfStake(),getBalanceOfToken(),sotienStake=0,sotienUntake=0">+</div>
+               <div>Bạn đã hoàn cmn tất giao dịch</div>
+               <a v-bind:href="linkGiaoDich" target="_blank">fake fake fake</a>
+           </div>
+        </div>
+        </div>
+        <div class="stake-sunTron" v-if="sunTron== 3">
+        <div class="stake-body">
+           <div class="stake-sunTron-content">
+               <div class="stake-sunTron-exit" @click="sunTron= 0,thaydoibody(),sotienUnstake=0,sotienStake=0">+</div>
+           <div>
+                <div class="stake-sunTron-header"><span class="stake-sunTron-header-stake" @click="sunTronStake=true" :class="{stakesunTronheaderhover : sunTronStake}">Stake</span><span class="stake-sunTron-header-claim"  @click="sunTronStake=false" :class="{stakesunTronheaderhover: !sunTronStake}">Claim</span></div><br/>
+            <div v-if="sunTronStake==true" class="stake-sunTron-body">
+                <div class="stake-sunTron-body1">
+                    <p>My Stake</p>
+                    <div class="stake-sunTron-input1"><div class="stake-sunTron-input1-1">{{balanceStake}}</div></div>
+                </div>
+                <div class="stake-sunTron-body2">
+                    <p>Stake BANK<span @click="getMaxToken()">MAX</span></p>
+                    <input class="stake-sunTron-input2" v-model="sotienstake" placeholder="0">
+                    <p class="stake-sunTron-body2-footer">Maximum Stake:{{balanceToken}} BANK</p>
+                </div>
+                <div class="stake-sunTron-footer" @click="stakeToken()">
+                    Stake
+                </div>
+            </div>
+            <div v-else class="stake-sunTron-body">
+                <div class="stake-sunTron-body1">
+                    <p>Pending Claim<span @click="claimWithDraw()">Claim</span></p>
+                    <p class="stake-sunTron-input1">{{balanceOfDraw}}</p>
+                </div>
+                <div class="stake-sunTron-body2">
+                    <p>Staked<span @click="sotienUnstake = balanceStake">MAX</span></p>
+                    <input class="stake-sunTron-input2" v-model="sotienUnstake" placeholder="0">
+                    <p class="stake-sunTron-body2-footer">Maximum Amount: {{balanceStake}} SUN</p>
+                </div>
+                <div class="stake-sunTron-footer" @click="unstakeTokenAndDraw()">
                     Claim & Unstake
                 </div>
             </div>
@@ -740,17 +827,18 @@ export default {
             xCheck: true,
             addressId:'',
             voteItems: 0,
-            sunTron:false,
+            sunTron:0,
             uTron:false,
             tTron:false,
             sunTronStake: true,
-            bankAddress:'TNnBeZ8U5tt2wBC5TiqUWaxRu9LqhFT9zC',
-            trc20ContractAddress: 'TRyhsLwZXaJv9KA15EJ2sQwiXmo8wVYhD1',
+            sunAddress:'THsCsHqNgHqK6We58cC5XU8JP1CWELUzCC',
+            tokenAddress:'THsCsHqNgHqK6We58cC5XU8JP1CWELUzCC',
+            trc20ContractAddress: 'TUfc76XDCJTyYZXrzN68mjeNqGt9Vn6PYq',
             balanceStake:0,
             sotienstake:0,
             sotienUnstake:0,
             balanceToken: 0,
-            a:0,
+            balanceOfDraw:0,
             magiaodich:'',
             linkGiaoDich:'https://shasta.tronscan.org/#/transaction/'
             }
@@ -759,8 +847,6 @@ export default {
             getAddressId: function(){
               if(window.tronWeb && window.tronWeb.defaultAddress.base58){
                   this.addressId= window.tronWeb.defaultAddress.base58
-                  window.tronWeb.trx.getBalance(this.addressId) // thay dia chi cua vi vao
-                  .then(result => this.balanceOfTrx = result / Math.pow(10,6));
               }
               else this.addressId=''
             },
@@ -775,12 +861,13 @@ export default {
             stakeToken: async function() {
             if(this.sotienstake!=0){
             try {
-                // this.linkGiaoDich='https://shasta.tronscan.org/#/transaction/'
+                this.linkGiaoDich='https://shasta.tronscan.org/#/transaction/'
                 let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
                 await contract.stake(
+                    this.tokenAddress,
                     this.sotienstake*10
                 ).send({
-                    feeLimit: 5000000
+                    feeLimit: 500000000
                 }).then(output => this.magiaodich = output);
                 this.linkGiaoDich=this.linkGiaoDich + this.magiaodich
                 }
@@ -790,45 +877,103 @@ export default {
             },
             getBalanceOfStake: async function(){
                 let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
-                await contract.balanceOfStake().call()
+                await contract.balanceOfStake(
+                    this.tokenAddress
+                ).call()
                 .then(result => this.balanceStake = result/10)
                 // .then(result => this.balanceStake = parseInt(result.balance._hex))
             },
             getMaxToken: async function(){
-                let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
+                let contract = await window.tronWeb.contract().at(this.tokenAddress);
                 await contract.balanceOf(this.addressId).call()
                 .then(result => this.sotienstake = parseInt(result.balance._hex)/10)
             },
             getBalanceOfToken: async function(){
-                let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
+                let contract = await window.tronWeb.contract().at(this.tokenAddress);
                 await contract.balanceOf(this.addressId).call()
                 .then(result => this.balanceToken = parseInt(result.balance._hex)/10)
             },
-            unstakeToken: async function(){
+            unstakeTokenAndDraw: async function(){
                 if(this.sotienUnstake!=0){
             try {
-                // this.linkGiaoDich='https://shasta.tronscan.org/#/transaction/'
+                    this.linkGiaoDich='https://shasta.tronscan.org/#/transaction/'
+                    let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
+                    await contract.unStakingAndWithDraw(
+                        this.tokenAddress,
+                        this.sotienUnstake*10
+                    ).send({
+                        feeLimit: 5000000
+                    })
+                    .then(output => this.magiaodich = output);
+                    this.linkGiaoDich=this.linkGiaoDich + this.magiaodich
+                    }
+                    catch(error) {
+                    console.error("trigger smart contract error",error)}
+                }
+            },
+            claimWithDraw: async function(){
                 let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
-                await contract.unStaking(
-                    this.sotienUnstake*10
-                ).send({
+                 await contract.withDraw(
+                     this.tokenAddress
+                 ).send({
                     feeLimit: 5000000
                 })
-                .then(output => this.magiaodich = output);
+                // .then(output => this.magiaodich = output)
+                // this.linkGiaoDich=this.linkGiaoDich + this.magiaodich
+            },
+
+            getBalanceOfStakeTrx: async function(){
+                let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
+                await contract.balanceOfStake(
+                    this.addressId
+                ).call()
+                .then(result => this.balanceStake = result)
+                // .then(result => this.balanceStake = parseInt(result.balance._hex))
+            },
+             getBalanceOfTrx: async function(){
+                   await window.tronWeb.trx.getBalance(this.addressId) // thay dia chi cua vi vao
+                  .then(result => this.balanceOfTrx = result / Math.pow(10,6));
+            },
+             getMaxTrx: async function(){
+                this.sotienstake=this.balanceOfTrx;
+            },
+            stakeTrx: async function() {
+            if(this.sotienstake!=0){
+            try {
+                this.linkGiaoDich='https://shasta.tronscan.org/#/transaction/'
+                let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
+                await contract.stakeTrx().send({
+                    callValue:this.sotienstake*10**6,
+                    feeLimit: 500000000
+                }).then(output => this.magiaodich = output);
                 this.linkGiaoDich=this.linkGiaoDich + this.magiaodich
                 }
                 catch(error) {
                 console.error("trigger smart contract error",error)}
             }
             },
-            claimWithDraw: async function(){
+            unStakingTrx: async function(){
+                this.linkGiaoDich='https://shasta.tronscan.org/#/transaction/'
                 let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
-                 await contract.withDraw().send({
+                await contract.unStakeTrx(
+                    this.sotienUnstake
+                ).send({
+                        feeLimit: 5000000
+                    })
+                    .then(output => this.magiaodich = output);
+                    this.linkGiaoDich=this.linkGiaoDich + this.magiaodich
+            },
+            claimWithDrawTrx: async function(){
+                let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
+                 await contract.withDraw(
+                     this.addressId
+                 ).send({
                     feeLimit: 5000000
                 })
-                .then(output => this.magiaodich = output)
-                this.linkGiaoDich=this.linkGiaoDich + this.magiaodich
+                // .then(output => this.magiaodich = output)
+                // this.linkGiaoDich=this.linkGiaoDich + this.magiaodich
             },
+            
         },
         created() {
         this.interval = setInterval(() => this.getAddressId(), 1000);
