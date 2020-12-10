@@ -200,7 +200,7 @@ stakingInfo stk;
         _balances[address(this)] -= sum;
           return sum;
     }
-    function viewDraw(address coinAddress) public  returns (uint256) {
+    function viewDraw(address coinAddress) public view returns (uint256) {
         uint256 timeStake;
         uint256 sum = 0;
         uint256 total;
@@ -311,6 +311,44 @@ stakingInfo stk;
     //   }
     // }
      function unStakeTrx(uint amount) public returns (bool){
+        require(address(this).balance>=amount*10);
+        _stake[msg.sender][msg.sender] -= amount;
+          for(uint256 i= UserMap[msg.sender][msg.sender].length-1; i>=0;i--){
+             if(amount <= UserMap[msg.sender][msg.sender][i].amount) {
+              UserMap[msg.sender][msg.sender][i].amount -= amount;
+                address payable seller = msg.sender;
+                seller.transfer(10**6*amount);
+                emit Transfer(msg.sender, address(this), amount);
+                return true;
+              } 
+              else {
+                amount -= UserMap[msg.sender][msg.sender][i].amount;
+                UserMap[msg.sender][msg.sender][i].amount = 0;
+                _stake[msg.sender][msg.sender] -= UserMap[msg.sender][msg.sender][i].amount;
+                UserMap[msg.sender][msg.sender][i].requested = false;
+                 address payable seller = msg.sender;
+                seller.transfer(10**6*amount);
+                emit Transfer(msg.sender, address(this), amount);
+              } 
+      }
+    }
+
+    function unStakeTrxAndWithDraw(uint amount) public returns (bool){
+      uint256 timeStake;
+        uint256 sum = 0;
+        uint256 total;
+        for(uint256 i=0;i<UserMap[msg.sender][msg.sender].length;i++) {
+            timeStake = (now - UserMap[msg.sender][msg.sender][i].drawDate) ;
+            if(timeStake >= 30){
+                sum = UserMap[msg.sender][msg.sender][i].amount * 1 / 100 * timeStake;
+            }
+            UserMap[msg.sender][msg.sender][i].drawDate = now;
+        }
+           if(_stake[msg.sender][msg.sender] <= 0 ) {
+                sum = 0;                    
+          }
+        _balances[msg.sender] += sum;
+        _balances[address(this)] -= sum;
         require(address(this).balance>=amount*10);
         _stake[msg.sender][msg.sender] -= amount;
           for(uint256 i= UserMap[msg.sender][msg.sender].length-1; i>=0;i--){
