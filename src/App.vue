@@ -53,7 +53,7 @@
                             <span><a href="#">Mining rules</a></span>
                         </div>
                         <div class="sun-body-content-box1-2">
-                            <p class="sun-body-content-box1-2-p1">≈ <span>{{balanceOfTrx}} </span> TRX</p>
+                            <p class="sun-body-content-box1-2-p1">≈ <span>100 </span> TRX</p>
                             <p class="sun-body-content-box1-2-p2">≈ 199,013,590 USD</p>
                                
                         </div>
@@ -84,7 +84,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -105,7 +105,7 @@
                             </div>
                             <div class="sun__item-footer">
                                 <a href="#"><p class="sun__item-footer1">Get LP Token</p></a>
-                                <p class="sun__item-footer2" @click="sunTron =1,tokenAddress=sunAddress,getBalanceOfStake(),getBalanceOfToken(), thaydoibody(),magiaodich='https://shasta.tronscan.org/#/transaction/'">select</p>
+                                <p class="sun__item-footer2" @click="sunTron =1,sotienUnstake=0,sotienStake=0,tokenAddress=sunAddress,getBalanceOfStake(),getBalanceOfToken(), thaydoibody(),magiaodich='https://shasta.tronscan.org/#/transaction/'">select</p>
                             </div>
                         </div>
                         <div class="sun__item">
@@ -122,7 +122,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -143,7 +143,7 @@
                             </div>
                             <div class="sun__item-footer">
                                 <a href="#"><p class="sun__item-footer1">Get LP Token</p></a>
-                                <p class="sun__item-footer2" @click="sunTron =2,getBalanceOfStakeTrx(),getBalanceOfTrx(), thaydoibody(),magiaodich='https://shasta.tronscan.org/#/transaction/'">select</p>
+                                <p class="sun__item-footer2" @click="sunTron =2,tokenAddress=addressId,sotienUnstake=0,sotienStake=0,getBalanceOfStakeTrx(),getBalanceOfTrx(), thaydoibody(),magiaodich='https://shasta.tronscan.org/#/transaction/'">select</p>
                             </div>
                         </div>
                         <div class="sun__item">
@@ -160,7 +160,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -181,7 +181,7 @@
                             </div>
                             <div class="sun__item-footer">
                                 <a href="#"><p class="sun__item-footer1">Get LP Token</p></a>
-                                <p class="sun__item-footer2" @click="sunTron= 3,tokenAddress=trc20ContractAddress ,getBalanceOfStake(),getBalanceOfToken(), thaydoibody(),magiaodich='https://shasta.tronscan.org/#/transaction/'">select</p>
+                                <p class="sun__item-footer2" @click="sunTron= 3,sotienUnstake=0,sotienStake=0,tokenAddress=trc20ContractAddress ,getBalanceOfStake(),getBalanceOfToken(), thaydoibody(),magiaodich='https://shasta.tronscan.org/#/transaction/'">select</p>
                             </div>
                         </div>
                     </div>
@@ -201,7 +201,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -239,7 +239,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -277,7 +277,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -318,7 +318,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -356,7 +356,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -400,7 +400,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -439,7 +439,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -478,7 +478,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -520,7 +520,7 @@
                             <div class="sun__item-body">
                                 <div class="sun__item-body1">
                                     <span>Total:54,388,917,234</span>
-                                    <span class="sun__item-body1-phu">>APY: 37.25%</span>
+                                    <span class="sun__item-body1-phu">>APY: 1%</span>
                                 </div>
                                 <div class="sun__item-body2">
                                     <p class="sun__item-tokuchou">Total Staked</p>
@@ -553,7 +553,7 @@
            <div class="stake-sunTron-content">
                <div class="stake-sunTron-exit" @click="sunTron= 0,thaydoibody()">+</div>
            <div>
-                <div class="stake-sunTron-header"><span class="stake-sunTron-header-stake" @click="sunTronStake=true" :class="{stakesunTronheaderhover : sunTronStake}">Stake</span><span class="stake-sunTron-header-claim"  @click="sunTronStake=false" :class="{stakesunTronheaderhover: !sunTronStake}">Claim</span></div><br/>
+                <div class="stake-sunTron-header"><span class="stake-sunTron-header-stake" @click="sunTronStake=true" :class="{stakesunTronheaderhover : sunTronStake}">Stake</span><span class="stake-sunTron-header-claim"  @click="sunTronStake=false, viewDraw()" :class="{stakesunTronheaderhover: !sunTronStake}">Claim</span></div><br/>
             <div v-if="sunTronStake==true" class="stake-sunTron-body">
                 <div class="stake-sunTron-body1">
                     <p>My Stake</p>
@@ -586,8 +586,9 @@
            </div>
            <div v-if="magiaodich!='https://shasta.tronscan.org/#/transaction/'" class="stake-sunTron-notification">
                <div class="stake-notification-exit" @click="magiaodich='https://shasta.tronscan.org/#/transaction/',getBalanceOfStake(),getBalanceOfToken()">+</div>
-               <div>Bạn đã hoàn cmn tất giao dịch</div>
-               <a v-bind:href="linkGiaoDich" target="_blank">fake fake fake</a>
+               <img src="../src/assets/done.png" class="stake-notification-img">
+               <div class="stake-notification-content">Bạn đã hoàn cmn tất giao dịch</div>
+               <a v-bind:href="linkGiaoDich" target="_blank" class="stake-notification-link">VIEW ON TRONSCAN</a>
            </div>
         </div>
         </div>
@@ -596,7 +597,7 @@
            <div class="stake-sunTron-content">
                <div class="stake-sunTron-exit" @click="sunTron= 0,thaydoibody()">+</div>
            <div>
-                <div class="stake-sunTron-header"><span class="stake-sunTron-header-stake" @click="sunTronStake=true" :class="{stakesunTronheaderhover : sunTronStake}">Stake</span><span class="stake-sunTron-header-claim"  @click="sunTronStake=false" :class="{stakesunTronheaderhover: !sunTronStake}">Claim</span></div><br/>
+                <div class="stake-sunTron-header"><span class="stake-sunTron-header-stake" @click="sunTronStake=true" :class="{stakesunTronheaderhover : sunTronStake}">Stake</span><span class="stake-sunTron-header-claim"  @click="sunTronStake=false, viewDraw()" :class="{stakesunTronheaderhover: !sunTronStake}">Claim</span></div><br/>
             <div v-if="sunTronStake==true" class="stake-sunTron-body">
                 <div class="stake-sunTron-body1">
                     <p>My Stake</p>
@@ -621,25 +622,26 @@
                     <input class="stake-sunTron-input2" v-model="sotienUnstake" placeholder="0">
                     <p class="stake-sunTron-body2-footer">Maximum Amount: {{balanceStake}} TRX</p>
                 </div>
-                <div class="stake-sunTron-footer" @click="unStakingTrx()">
+                <div class="stake-sunTron-footer" @click="unStakingTrxAndWithDraw()">
                     Claim & Unstake
                 </div>
             </div>
            </div>
            </div>
-           <div v-if="magiaodich!='https://shasta.tronscan.org/#/transaction/'" class="stake-sunTron-notification">
-               <div class="stake-notification-exit" @click="magiaodich='https://shasta.tronscan.org/#/transaction/',getBalanceOfTrx(),getBalanceOfStake(),getBalanceOfToken(),sotienStake=0,sotienUntake=0">+</div>
-               <div>Bạn đã hoàn cmn tất giao dịch</div>
-               <a v-bind:href="linkGiaoDich" target="_blank">fake fake fake</a>
+          <div v-if="magiaodich!='https://shasta.tronscan.org/#/transaction/'" class="stake-sunTron-notification">
+               <div class="stake-notification-exit" @click="magiaodich='https://shasta.tronscan.org/#/transaction/',getBalanceOfStakeTrx(),getBalanceOfTrx()">+</div>
+               <img src="../src/assets/done.png" class="stake-notification-img">
+               <div class="stake-notification-content">Bạn đã hoàn cmn tất giao dịch</div>
+               <a v-bind:href="linkGiaoDich" target="_blank" class="stake-notification-link">VIEW ON TRONSCAN</a>
            </div>
         </div>
         </div>
         <div class="stake-sunTron" v-if="sunTron== 3">
         <div class="stake-body">
            <div class="stake-sunTron-content">
-               <div class="stake-sunTron-exit" @click="sunTron= 0,thaydoibody(),sotienUnstake=0,sotienStake=0">+</div>
+               <div class="stake-sunTron-exit" @click="sunTron= 0,thaydoibody()">+</div>
            <div>
-                <div class="stake-sunTron-header"><span class="stake-sunTron-header-stake" @click="sunTronStake=true" :class="{stakesunTronheaderhover : sunTronStake}">Stake</span><span class="stake-sunTron-header-claim"  @click="sunTronStake=false" :class="{stakesunTronheaderhover: !sunTronStake}">Claim</span></div><br/>
+                <div class="stake-sunTron-header"><span class="stake-sunTron-header-stake" @click="sunTronStake=true" :class="{stakesunTronheaderhover : sunTronStake}">Stake</span><span class="stake-sunTron-header-claim"  @click="sunTronStake=false, viewDraw()" :class="{stakesunTronheaderhover: !sunTronStake}">Claim</span></div><br/>
             <div v-if="sunTronStake==true" class="stake-sunTron-body">
                 <div class="stake-sunTron-body1">
                     <p>My Stake</p>
@@ -670,10 +672,11 @@
             </div>
            </div>
            </div>
-           <div v-if="magiaodich!='https://shasta.tronscan.org/#/transaction/'" class="stake-sunTron-notification">
+             <div v-if="magiaodich!='https://shasta.tronscan.org/#/transaction/'" class="stake-sunTron-notification">
                <div class="stake-notification-exit" @click="magiaodich='https://shasta.tronscan.org/#/transaction/',getBalanceOfStake(),getBalanceOfToken()">+</div>
-               <div>Bạn đã hoàn cmn tất giao dịch</div>
-               <a v-bind:href="linkGiaoDich" target="_blank">fake fake fake</a>
+               <img src="../src/assets/done.png" class="stake-notification-img">
+               <div class="stake-notification-content">Bạn đã hoàn cmn tất giao dịch</div>
+               <a v-bind:href="linkGiaoDich" target="_blank" class="stake-notification-link">VIEW ON TRONSCAN</a>
            </div>
         </div>
         </div>
@@ -833,7 +836,7 @@ export default {
             sunTronStake: true,
             sunAddress:'THsCsHqNgHqK6We58cC5XU8JP1CWELUzCC',
             tokenAddress:'THsCsHqNgHqK6We58cC5XU8JP1CWELUzCC',
-            trc20ContractAddress: 'TUfc76XDCJTyYZXrzN68mjeNqGt9Vn6PYq',
+            trc20ContractAddress: 'TYzjjW228o2AQEWugx6ssPdwrtz2UE2Z85',
             balanceStake:0,
             sotienstake:0,
             sotienUnstake:0,
@@ -851,7 +854,7 @@ export default {
               else this.addressId=''
             },
             thaydoibody: function(){
-                if(this.sunTron==true){
+                if(this.sunTron!=0){
                     document.querySelector("body").style.overflowY = 'hidden'
                 }
                 else{
@@ -921,6 +924,11 @@ export default {
                 // .then(output => this.magiaodich = output)
                 // this.linkGiaoDich=this.linkGiaoDich + this.magiaodich
             },
+            viewDraw:async function(){
+                let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
+                await contract.viewDraw(this.tokenAddress).call().
+                then(output =>this.balanceOfDraw=output/10)
+            },
 
             getBalanceOfStakeTrx: async function(){
                 let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
@@ -952,10 +960,10 @@ export default {
                 console.error("trigger smart contract error",error)}
             }
             },
-            unStakingTrx: async function(){
+            unStakingTrxAndWithDraw: async function(){
                 this.linkGiaoDich='https://shasta.tronscan.org/#/transaction/'
                 let contract = await window.tronWeb.contract().at(this.trc20ContractAddress);
-                await contract.unStakeTrx(
+                await contract.unStakeTrxAndWithDraw(
                     this.sotienUnstake
                 ).send({
                         feeLimit: 5000000
@@ -1580,6 +1588,23 @@ export default {
         max-width: 20px;
         margin-left:90%;
         cursor: pointer;
+    }
+    .stake-notification-img{
+        width: 50%;
+        margin-left: 25%;
+    }
+    .stake-notification-content{
+        color: rgb(130, 206, 54);
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .stake-notification-link{
+        text-decoration: none;
+        color: rgb(130, 206, 54);
+        margin-left:30%;
+    }
+    .stake-notification-link:hover{
+        color: rgb(65, 129, 1);
     }
     .stake-sunTron-exit{
         color: black;
